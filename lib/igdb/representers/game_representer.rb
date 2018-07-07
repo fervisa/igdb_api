@@ -1,6 +1,7 @@
 module Igdb::GameRepresenter
   include Igdb::BaseRepresenter
 
+  property :id
   property :summary # Not documented in V1 API
   property :storyline
   property :collection
@@ -16,6 +17,8 @@ module Igdb::GameRepresenter
   property :category
   property :time_to_beat
   property :game
+  property :name
+  property :platforms
   property :cover, extend: Igdb::ImageRepresenter, class: OpenStruct # The cover image of the game.
 
   collection :developers
